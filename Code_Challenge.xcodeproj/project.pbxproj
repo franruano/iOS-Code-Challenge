@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6F089092B26FBAF009388DC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F089082B26FBAF009388DC /* MainCoordinator.swift */; };
+		A6F0890B2B26FCB3009388DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0890A2B26FCB3009388DC /* LoginViewController.swift */; };
+		A6F0890D2B27054F009388DC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0890C2B27054F009388DC /* Login.swift */; };
+		A6F0890F2B27056C009388DC /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0890E2B27056C009388DC /* LoginInteractor.swift */; };
+		A6F089112B270580009388DC /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F089102B270580009388DC /* LoginPresenter.swift */; };
 		E39AD7CD50228EC0EFF63D84 /* Pods_Code_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB362D8C5DED6F5762BA72 /* Pods_Code_ChallengeTests.framework */; };
 		E5391C1721AB788E0052B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391C1621AB788E0052B1EA /* AppDelegate.swift */; };
 		E5391C1E21AB788E0052B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5391C1D21AB788E0052B1EA /* Assets.xcassets */; };
@@ -33,6 +38,11 @@
 		385D79663CE46FFC87CE2F2A /* Pods_Code_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Code_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		400A043A277466E1A85EDEBF /* Pods-Code_ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Code_ChallengeTests/Pods-Code_ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CAC04A367E1D7BC7BBC45DC /* Pods-Code_Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Code_Challenge/Pods-Code_Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		A6F089082B26FBAF009388DC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A6F0890A2B26FCB3009388DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A6F0890C2B27054F009388DC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		A6F0890E2B27056C009388DC /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		A6F089102B270580009388DC /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BE971E724CEA89C7D2105846 /* Pods-Code_Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_Challenge.release.xcconfig"; path = "Target Support Files/Pods-Code_Challenge/Pods-Code_Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		E5391C1321AB788E0052B1EA /* Code_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5391C1621AB788E0052B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +85,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A6F089032B26F5C7009388DC /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A6F089052B26F850009388DC /* Tweet list */,
+				A6F089042B26F842009388DC /* Authentication */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A6F089042B26F842009388DC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A6F0890A2B26FCB3009388DC /* LoginViewController.swift */,
+				A6F0890C2B27054F009388DC /* Login.swift */,
+				A6F0890E2B27056C009388DC /* LoginInteractor.swift */,
+				A6F089102B270580009388DC /* LoginPresenter.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A6F089052B26F850009388DC /* Tweet list */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tweet list";
+			sourceTree = "<group>";
+		};
+		A6F089072B26FB01009388DC /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A6F089082B26FBAF009388DC /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		E5391C0A21AB788E0052B1EA = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +143,8 @@
 		E5391C1521AB788E0052B1EA /* Code_Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				A6F089072B26FB01009388DC /* Coordinators */,
+				A6F089032B26F5C7009388DC /* Features */,
 				E5391C1621AB788E0052B1EA /* AppDelegate.swift */,
 				E5391C3A21AB799D0052B1EA /* Models */,
 				E5391C3B21AB79A40052B1EA /* Services */,
@@ -355,8 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F089112B270580009388DC /* LoginPresenter.swift in Sources */,
 				E5391C3F21AB79D80052B1EA /* Tweet.swift in Sources */,
+				A6F089092B26FBAF009388DC /* MainCoordinator.swift in Sources */,
+				A6F0890F2B27056C009388DC /* LoginInteractor.swift in Sources */,
 				E5391C3D21AB79D10052B1EA /* TwitterClient.swift in Sources */,
+				A6F0890D2B27054F009388DC /* Login.swift in Sources */,
+				A6F0890B2B26FCB3009388DC /* LoginViewController.swift in Sources */,
 				E5391C1721AB788E0052B1EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 895QHL4VV3;
 				INFOPLIST_FILE = "$(SRCROOT)/Code_Challenge/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,6 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 895QHL4VV3;
 				INFOPLIST_FILE = "$(SRCROOT)/Code_Challenge/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
