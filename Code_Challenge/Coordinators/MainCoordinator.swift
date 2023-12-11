@@ -1,11 +1,10 @@
 import UIKit
 
 final class MainCoordinator {
-    
-    private let service: TwitterClient
+    private let service: TwitterClientType
     let navigationController = UINavigationController()
     
-    init(service: TwitterClient) {
+    init(service: TwitterClientType) {
         self.service = service
         _ = service.isLoggedIn.observeNext { [weak self] isLoggedIn in
             if isLoggedIn {
@@ -17,10 +16,12 @@ final class MainCoordinator {
     }
     
     private func displayLogin() {
-        navigationController.setViewControllers([LoginBuilder.build(service)], animated: true)
+        guard let viewController = LoginBuilder.build(service) as? UIViewController else { return }
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
     private func showTweets() {
-        navigationController.setViewControllers([TweetListBuilder.build(service)], animated: true)
+        guard let viewController = TweetListBuilder.build(service) as? UIViewController else { return }
+        navigationController.setViewControllers([viewController], animated: true)
     }
 }

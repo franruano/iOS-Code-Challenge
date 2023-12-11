@@ -1,13 +1,13 @@
 import UIKit
 
-protocol TweetListView: UIViewController {
+protocol TweetListView: AnyObject {
     func setup(_ interactor: TweetListInteractorProtocol)
     func loadTimeline(_ tweets: [Tweet])
 }
 
 final class TweetListViewController: UIViewController, TweetListView {
     private var interactor: TweetListInteractorProtocol?
-    private var tweets = [Tweet]() {
+    internal var tweets = [Tweet]() {
         didSet {
             tableView.reloadData()
         }

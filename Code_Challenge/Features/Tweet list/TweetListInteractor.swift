@@ -1,16 +1,15 @@
 import Foundation
 
 protocol TweetListInteractorProtocol: AnyObject {
-    
     func logOut()
     func loadTimeline()
 }
 
 final class TweetListInteractor: TweetListInteractorProtocol {
     private let presenter: TweetListPresenterProtocol
-    private let service: TwitterClient
+    private let service: TwitterClientType
     
-    init(_ presenter: TweetListPresenterProtocol, service: TwitterClient) {
+    init(_ presenter: TweetListPresenterProtocol, service: TwitterClientType) {
         self.presenter = presenter
         self.service = service
     }

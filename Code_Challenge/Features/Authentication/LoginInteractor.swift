@@ -1,19 +1,19 @@
 import Foundation
 
 protocol LoginInteractorProtocol: AnyObject {
-    func login(usernarme: String, password: String)
+    func login(username: String, password: String)
 }
 
 final class LoginInteractor: LoginInteractorProtocol {
     private let presenter: LoginPresenterProtocol
-    private let service: TwitterClient
+    private let service: TwitterClientType
     
-    init(_ presenter: LoginPresenterProtocol, service: TwitterClient) {
+    init(_ presenter: LoginPresenterProtocol, service: TwitterClientType) {
         self.presenter = presenter
         self.service = service
     }
     
-    func login(usernarme: String, password: String) {
-        service.logIn(username: usernarme, password: password)
+    func login(username: String, password: String) {
+        service.logIn(username: username, password: password)
     }
 }

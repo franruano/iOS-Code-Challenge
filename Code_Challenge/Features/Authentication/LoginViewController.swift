@@ -1,22 +1,21 @@
 import UIKit
 
-protocol LoginView: UIViewController {
+protocol LoginView: AnyObject {
     func setup(_ interactor: LoginInteractorProtocol)
 }
 
 final class LoginViewController: UIViewController, LoginView {
-
     private var interactor: LoginInteractorProtocol?
     
 // MARK: - UI Components
-    private let usernameTextField: UITextField = {
+    lazy var usernameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Username"
         textField.borderStyle = .roundedRect
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
@@ -24,7 +23,7 @@ final class LoginViewController: UIViewController, LoginView {
         return textField
     }()
     
-    private let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
@@ -53,7 +52,7 @@ final class LoginViewController: UIViewController, LoginView {
     
     @objc func loginButtonTapped() {
         guard let username = usernameTextField.text?.lowercased(), let password = passwordTextField.text else { return }
-        interactor?.login(usernarme: username, password: password)
+        interactor?.login(username: username, password: password)
     }
 }
 
