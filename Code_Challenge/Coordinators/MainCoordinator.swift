@@ -9,6 +9,8 @@ final class MainCoordinator {
     }
     
     func loadApp() -> UIViewController {
-        UINavigationController(rootViewController: Login.build(service))
+//        UINavigationController(rootViewController: LoginBuilder.build(service))
+        
+        UINavigationController(rootViewController: TweetListBuilder.build(service))
     }
 }

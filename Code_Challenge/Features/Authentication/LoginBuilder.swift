@@ -1,6 +1,6 @@
 import Foundation
 
-final class Login {
+final class LoginBuilder {
     static func build(_ service: TwitterClient) -> LoginView {
         let view = LoginViewController()
         let presenter = LoginPresenter(view)
