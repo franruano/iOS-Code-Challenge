@@ -1,6 +1,9 @@
 import Foundation
 
-protocol TweetListInteractorProtocol: AnyObject { }
+protocol TweetListInteractorProtocol: AnyObject {
+    
+    func logOut()
+}
 
 final class TweetListInteractor: TweetListInteractorProtocol {
     private let presenter: TweetListPresenterProtocol
@@ -9,5 +12,9 @@ final class TweetListInteractor: TweetListInteractorProtocol {
     init(_ presenter: TweetListPresenterProtocol, service: TwitterClient) {
         self.presenter = presenter
         self.service = service
+    }
+    
+    func logOut() {
+        service.logOut()
     }
 }
