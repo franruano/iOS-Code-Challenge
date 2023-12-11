@@ -5,8 +5,8 @@ protocol LoginInteractorProtocol: AnyObject {
 }
 
 final class LoginInteractor: LoginInteractorProtocol {
-    private let presenter: LoginPresenterProtocol
-    private let service: TwitterClientType
+    internal let presenter: LoginPresenterProtocol
+    internal let service: TwitterClientType
     
     init(_ presenter: LoginPresenterProtocol, service: TwitterClientType) {
         self.presenter = presenter

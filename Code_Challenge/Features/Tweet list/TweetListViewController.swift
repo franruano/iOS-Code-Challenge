@@ -6,7 +6,7 @@ protocol TweetListView: AnyObject {
 }
 
 final class TweetListViewController: UIViewController, TweetListView {
-    private var interactor: TweetListInteractorProtocol?
+    internal var interactor: TweetListInteractorProtocol?
     internal var tweets = [Tweet]() {
         didSet {
             tableView.reloadData()

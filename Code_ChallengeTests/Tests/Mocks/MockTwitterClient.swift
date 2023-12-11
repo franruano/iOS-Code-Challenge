@@ -4,7 +4,6 @@ import ReactiveKit
 
 
 final class MockTwitterClient: TwitterClientType {
-//    private static let isLoggedInKey = "isLoggedIn"
     private let bag = DisposeBag()
     
     init()

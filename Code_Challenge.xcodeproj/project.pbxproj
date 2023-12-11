@@ -20,6 +20,8 @@
 		A64CAC352B2781C7006DD962 /* MockTweetListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CAC342B2781C7006DD962 /* MockTweetListPresenter.swift */; };
 		A64CAC372B27823E006DD962 /* TweetListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CAC362B27823E006DD962 /* TweetListPresenterTests.swift */; };
 		A64CAC392B27843B006DD962 /* MockTweetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CAC382B27843B006DD962 /* MockTweetListViewController.swift */; };
+		A64CAC3B2B278675006DD962 /* TweetListBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CAC3A2B278675006DD962 /* TweetListBuilderTests.swift */; };
+		A64CAC3D2B27898B006DD962 /* LoginBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CAC3C2B27898B006DD962 /* LoginBuilderTests.swift */; };
 		A68C0ADD2B2713060030BC7F /* TweetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68C0AD92B2713060030BC7F /* TweetListViewController.swift */; };
 		A68C0ADE2B2713060030BC7F /* TweetListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68C0ADA2B2713060030BC7F /* TweetListInteractor.swift */; };
 		A68C0ADF2B2713060030BC7F /* TweetListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68C0ADB2B2713060030BC7F /* TweetListBuilder.swift */; };
@@ -68,6 +70,8 @@
 		A64CAC342B2781C7006DD962 /* MockTweetListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTweetListPresenter.swift; sourceTree = "<group>"; };
 		A64CAC362B27823E006DD962 /* TweetListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListPresenterTests.swift; sourceTree = "<group>"; };
 		A64CAC382B27843B006DD962 /* MockTweetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTweetListViewController.swift; sourceTree = "<group>"; };
+		A64CAC3A2B278675006DD962 /* TweetListBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListBuilderTests.swift; sourceTree = "<group>"; };
+		A64CAC3C2B27898B006DD962 /* LoginBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilderTests.swift; sourceTree = "<group>"; };
 		A68C0AD92B2713060030BC7F /* TweetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetListViewController.swift; sourceTree = "<group>"; };
 		A68C0ADA2B2713060030BC7F /* TweetListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetListInteractor.swift; sourceTree = "<group>"; };
 		A68C0ADB2B2713060030BC7F /* TweetListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetListBuilder.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				A64CAC2E2B277CF9006DD962 /* TweetListViewControllerTests.swift */,
 				A64CAC322B277F76006DD962 /* TweetListInteractorTests.swift */,
 				A64CAC362B27823E006DD962 /* TweetListPresenterTests.swift */,
+				A64CAC3A2B278675006DD962 /* TweetListBuilderTests.swift */,
 			);
 			path = "Tweet List";
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				A64CAC2C2B277C7C006DD962 /* Mocks */,
 				A64CAC242B2775DA006DD962 /* LoginViewControllerTests.swift */,
 				A64CAC282B277A61006DD962 /* LoginInteractorTests.swift */,
+				A64CAC3C2B27898B006DD962 /* LoginBuilderTests.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -523,9 +529,11 @@
 			files = (
 				A64CAC372B27823E006DD962 /* TweetListPresenterTests.swift in Sources */,
 				A64CAC2B2B277BDB006DD962 /* MockLoginPresenter.swift in Sources */,
+				A64CAC3D2B27898B006DD962 /* LoginBuilderTests.swift in Sources */,
 				A64CAC252B2775DA006DD962 /* LoginViewControllerTests.swift in Sources */,
 				A64CAC272B27770B006DD962 /* MockLoginInteractor.swift in Sources */,
 				A64CAC212B275DE0006DD962 /* MockTwitterClient.swift in Sources */,
+				A64CAC3B2B278675006DD962 /* TweetListBuilderTests.swift in Sources */,
 				A64CAC2F2B277CF9006DD962 /* TweetListViewControllerTests.swift in Sources */,
 				E5391C4621AB7A180052B1EA /* TwitterClientSpec.swift in Sources */,
 				A64CAC352B2781C7006DD962 /* MockTweetListPresenter.swift in Sources */,

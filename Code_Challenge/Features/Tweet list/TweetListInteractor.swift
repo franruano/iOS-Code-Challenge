@@ -6,8 +6,8 @@ protocol TweetListInteractorProtocol: AnyObject {
 }
 
 final class TweetListInteractor: TweetListInteractorProtocol {
-    private let presenter: TweetListPresenterProtocol
-    private let service: TwitterClientType
+    internal let presenter: TweetListPresenterProtocol
+    internal let service: TwitterClientType
     
     init(_ presenter: TweetListPresenterProtocol, service: TwitterClientType) {
         self.presenter = presenter
