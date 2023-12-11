@@ -1,8 +1,6 @@
 import Foundation
 
-protocol LoginPresenterProtocol {
-    
-}
+protocol LoginPresenterProtocol: AnyObject { }
 
 final class LoginPresenter: LoginPresenterProtocol {
     private let view: LoginView
