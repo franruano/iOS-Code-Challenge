@@ -5,8 +5,7 @@ final class TweetListBuilder {
         let view = TweetListViewController()
         let presenter = TweetListPresenter(view)
         let interactor = TweetListInteractor(presenter, service: service)
-        let viewController = TweetListViewController()
-        viewController.setup(interactor)
+        view.setup(interactor)
         return view
     }
 }

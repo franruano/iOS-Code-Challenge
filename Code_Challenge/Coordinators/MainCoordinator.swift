@@ -16,11 +16,11 @@ final class MainCoordinator {
         }
     }
     
-    func displayLogin() {
+    private func displayLogin() {
         navigationController.setViewControllers([LoginBuilder.build(service)], animated: true)
     }
     
-    func showTweets() {
+    private func showTweets() {
         navigationController.setViewControllers([TweetListBuilder.build(service)], animated: true)
     }
 }

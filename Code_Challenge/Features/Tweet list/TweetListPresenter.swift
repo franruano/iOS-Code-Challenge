@@ -1,11 +1,9 @@
 import Foundation
 
-protocol TweetListPresenterProtocol {
-    
-}
+protocol TweetListPresenterProtocol: AnyObject { }
 
 final class TweetListPresenter: TweetListPresenterProtocol {
-    private let view: TweetListView
+    private weak var view: TweetListView?
     
     init(_ view: TweetListView) {
         self.view = view

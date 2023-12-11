@@ -5,7 +5,7 @@ protocol LoginInteractorProtocol: AnyObject {
 }
 
 final class LoginInteractor: LoginInteractorProtocol {
-    private weak var presenter: LoginPresenterProtocol?
+    private let presenter: LoginPresenterProtocol
     private let service: TwitterClient
     
     init(_ presenter: LoginPresenterProtocol, service: TwitterClient) {
