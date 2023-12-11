@@ -3,6 +3,7 @@ import Foundation
 protocol TweetListInteractorProtocol: AnyObject {
     
     func logOut()
+    func loadTimeline()
 }
 
 final class TweetListInteractor: TweetListInteractorProtocol {
@@ -16,5 +17,10 @@ final class TweetListInteractor: TweetListInteractorProtocol {
     
     func logOut() {
         service.logOut()
+    }
+    
+    func loadTimeline() {
+        let tweets = service.loadTimeline()
+        presenter.loadTimeline(tweets)
     }
 }

@@ -2,6 +2,7 @@ import UIKit
 
 protocol TweetListView: UIViewController {
     func setup(_ interactor: TweetListInteractorProtocol)
+    func loadTimeline(_ tweets: [Tweet])
 }
 
 final class TweetListViewController: UIViewController, TweetListView {
@@ -15,10 +16,10 @@ final class TweetListViewController: UIViewController, TweetListView {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tweetCell")
+        tableView.register(SubtitleTableViewCell.self, forCellReuseIdentifier: SubtitleTableViewCell.cellName)
         view.addSubview(tableView)
         tableView.dataSource = self
-        // tableView.delegate = self
+        tableView.delegate = self
         
         return tableView
     }()
@@ -28,10 +29,16 @@ final class TweetListViewController: UIViewController, TweetListView {
         
         setupUI()
         setupNavigationBar()
+        
+        interactor?.loadTimeline()
     }
     
     func setup(_ interactor: TweetListInteractorProtocol) {
         self.interactor = interactor
+    }
+    
+    func loadTimeline(_ tweets: [Tweet]) {
+        self.tweets = tweets
     }
     
     @objc func logOutButtonTapped() {
@@ -39,19 +46,23 @@ final class TweetListViewController: UIViewController, TweetListView {
     }
 }
 
-extension TweetListViewController: UITableViewDataSource {
+extension TweetListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: SubtitleTableViewCell.cellName, for: indexPath)
+
         let tweet = tweets[indexPath.row]
         cell.textLabel?.text = tweet.content
         cell.detailTextLabel?.text = tweet.user
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 
