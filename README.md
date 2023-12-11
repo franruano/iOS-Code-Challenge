@@ -63,3 +63,8 @@ Feel free to use any frameworks that will help you, just please edit README's "A
 
 
 ## Additional Frameworks Used
+No additional frameworks used
+
+## Solution implemented
+I implemented a VIP architecture with a Coordinator. As mentioned in the project description, the app is over-engineered, but it could serve as an example of a clean architecture implementation. In my opinion, the architecture isn't perfect, as it includes too much boilerplate code, and the requirement to follow the View-Interactor-Presenter flow could make the development process lengthy. On the positive side, it has a very clear flow that facilitates testing and maintains a nice separation of layers and responsibilities.
+The coordinator is a very simple example of implementation but it helps up to keep the clean architecture I'm trying to maintain. 
