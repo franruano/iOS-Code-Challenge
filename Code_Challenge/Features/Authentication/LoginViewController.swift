@@ -5,7 +5,7 @@ protocol LoginView: AnyObject {
 }
 
 final class LoginViewController: UIViewController, LoginView {
-    internal var interactor: LoginInteractorProtocol?
+    private(set) var interactor: LoginInteractorProtocol?
     
 // MARK: - UI Components
     lazy var usernameTextField: UITextField = {
